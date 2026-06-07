@@ -1,0 +1,70 @@
+{
+  "name": "B2B Lead Qualification Agent",
+  "description": "Scores inbound B2B inquiries, extracts buying signals, identifies missing RFQ details, and drafts next-step responses.",
+  "provider": {
+    "organization": "Your Company",
+    "url": "http://localhost:8080"
+  },
+  "version": "0.1.0",
+  "documentationUrl": "http://localhost:8080/docs",
+  "supportedInterfaces": [
+    {
+      "url": "http://localhost:8080/message:send",
+      "protocolBinding": "HTTP+JSON",
+      "protocolVersion": "1.0"
+    },
+    {
+      "url": "http://localhost:8080/rpc",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    },
+    {
+      "url": "http://localhost:8080/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "0.3"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "qualify_b2b_lead",
+      "name": "Qualify B2B lead",
+      "description": "Evaluate a raw inquiry or structured lead object and return score, buyer signals, missing fields, risk flags, recommended action, and reply draft.",
+      "tags": [
+        "sales",
+        "lead-qualification",
+        "rfq",
+        "b2b",
+        "commerce"
+      ],
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "examples": [
+        "Please quote 500 motorcycle helmets to Germany. Need samples this week.",
+        "{\"product\":\"floor tiles\",\"quantity\":\"2 containers\",\"country\":\"USA\"}"
+      ]
+    }
+  ],
+  "metadata": {
+    "monetizationModel": "subscription or usage-based lead scoring",
+    "suggestedPricing": "$49-$199/month per site or per-lead usage billing"
+  }
+}
