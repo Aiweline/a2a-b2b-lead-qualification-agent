@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-06-07T05:28:22.299355Z",
+  "safeAutomationPolicy": {
+    "auto_submit_forms": false,
+    "auto_send_email": false,
+    "auto_register_accounts": false,
+    "allow_paid_onboarding": false,
+    "allow_checkout_or_billing_pages": false,
+    "payment_direction": "receive-only",
+    "human_final_click_required": true
+  },
+  "submissionFields": {
+    "agentName": "B2B Lead Qualification Agent",
+    "shortDescription": "A2A agent that scores inbound B2B inquiries, extracts RFQ signals, finds missing fields, flags risks, and drafts next-step replies.",
+    "category": "sales-automation",
+    "agentCardUrl": "https://fuzzy-buses-matter.loca.lt/.well-known/agent-card.json",
+    "demoEndpointUrl": "https://fuzzy-buses-matter.loca.lt/message:send",
+    "githubRepoUrl": "",
+    "supportEmail": "",
+    "receiveOnlyPaymentUrl": "",
+    "tags": [
+      "A2A",
+      "B2B",
+      "sales",
+      "lead-scoring",
+      "RFQ"
+    ],
+    "pricingSummary": {
+      "starter_monthly_usd": 49,
+      "professional_monthly_usd": 199,
+      "usage_unit": "qualified lead",
+      "usage_price_usd": 0.05
+    }
+  },
+  "audit": [
+    {
+      "level": "ok",
+      "code": "LOCAL_CARD_OK",
+      "message": "Local Agent Card reachable: B2B Lead Qualification Agent"
+    },
+    {
+      "level": "ok",
+      "code": "PUBLIC_AGENT_CARD_SET",
+      "message": "Public Agent Card configured: https://fuzzy-buses-matter.loca.lt/.well-known/agent-card.json"
+    },
+    {
+      "level": "warn",
+      "code": "SUPPORT_EMAIL_MISSING",
+      "message": "support_email is empty; marketplaces often require contact info."
+    },
+    {
+      "level": "warn",
+      "code": "PAYPAL_RECEIVE_URL_MISSING",
+      "message": "paypal_receive_url is empty; add only a receive-only link after manual setup."
+    }
+  ],
+  "manualOnly": [
+    "Do not auto-submit registration forms.",
+    "Do not auto-send Gmail outreach.",
+    "Do not enter payment card, checkout, billing, subscription, or paid onboarding flows.",
+    "Use PayPal only as a receive-only link after manual review."
+  ]
+}
